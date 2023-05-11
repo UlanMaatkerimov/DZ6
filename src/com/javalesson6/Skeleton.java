@@ -7,14 +7,15 @@ public class Skeleton extends Boss {
         return numbersOfArrows;
     }
 
-    public Skeleton(int damage, int health, Weapon weapon) {
+    public Skeleton(int damage, int health, Weapon weapon, int numbersOfArrows) {
         super(damage, health, weapon);
+        this.numbersOfArrows = numbersOfArrows;
     }
 
     @Override
     public String printlnfo() {
         return getClass().getSimpleName() + " health: " + getHealth() +
-                " " + " Damage: [" + getDamage() + "]" + " Boss weapon: " + getWeapon().getWeaponType() + getWeapon().getGun();
+                " " + " Damage: [" + getDamage() + "]" + " Boss weapon: " + getWeapon().getWeaponType() + getWeapon().getGun() + " " + numbersOfArrows;
     }
 }
 
